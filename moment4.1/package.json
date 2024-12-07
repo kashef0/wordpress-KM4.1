@@ -1,0 +1,16 @@
+{
+  "name": "moment4.1",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --open chrome",
+    "build": "parcel build --no-source-maps"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.2"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "parcel-plugin-concat": "^0.2.3",
+    "sharp": "^0.33.5"
+  }
+}

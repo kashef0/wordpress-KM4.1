@@ -1,0 +1,353 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.background-video {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    filter: brightness(.7)
+}
+
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.main_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    
+}
+
+/* Content Section */
+.content {
+    flex: 0 0 70%;
+    background-color: #ffffffc6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+.presentation_content {
+    position: relative; 
+    padding: .5rem;
+    border-radius: 8px;
+    height: 40lvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.presentation_content::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    filter: brightness(0.5);
+    z-index: -1; 
+}
+
+.presentation_content_info {
+    color: #f9f9f9;
+    position: relative; 
+    z-index: 2;
+}
+
+
+
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content .article-excerpt {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.scetion_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .btn {
+    display: inline-block;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.content .btn:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+#cars-for-sale {
+    margin-top: 20px;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+}
+
+#cars-for-sale header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.car-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.car-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffffba;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.car-item:hover {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.article-image-container {
+    /* flex: 0 0 120px; */
+    display: contents;
+}
+
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.article-title a {
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.article-title a:hover, .sidebar .news-item a:hover {
+    color: #007bff;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-excerpt {
+    font-size: 1rem;
+    color: #555;
+}
+
+.service_rubrik {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 0 0 25%;
+    background-color: #ffffff8a;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.aside_bar {
+    padding: .5rem;
+    margin-top: .5rem;
+    background-color: #ffffffcc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aside_bar:hover {
+    background-color: #ffffff;
+    transform: scale(.95);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sidebar .news-item {
+    margin-bottom: 20px;
+}
+
+.sidebar .news-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+.sidebar .news-item a {
+    color: #444;
+}
+
+.sidebar .news-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer Styles */
+.main_footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.main_footer p {
+    font-size: 16px;
+}
+
+/* backgrund img för service och about sidor */
+
+.background-img {
+    position: relative;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.background-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000083;
+    z-index: -11;
+
+}
+
+
+/* Deffinera animation */
+@keyframes colorPulse {
+    0% { color: rgb(193, 84, 37); }
+    50% { color: #eff238; }
+    100% { color: red; }
+}
+
+
+.highlight-news {
+    animation: colorPulse 2s infinite; 
+    font-size: 1.5em; 
+    text-align: center; 
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main_content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .content, .sidebar {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    #cars-for-sale {
+        margin: 0;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+/* Responsive Styles */
+@media (max-width: 350px) {
+    .car-items {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .car-item {
+        padding: 10px;
+    }
+}

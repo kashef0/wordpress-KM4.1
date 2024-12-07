@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAREPAIR - About</title>
+    <link rel="icon" href="../src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/nav.css" />
+    <link rel="stylesheet" href="../src/css/about.css" />
+    <link rel="stylesheet" href="../src/css/styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="main_nav">
+        <div class="logo">
+          <a href="../src/index.html"
+            ><img src="../src/images/logo.png" alt="Företagets logotyp"
+          /></a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../src/index.html">Hem</a></li>
+          <li><a href="#" class="active">Om oss</a></li>
+          <li><a href="../src/services.html">Tjänster</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <section class="about_carpaier">
+        <h1>Om CAREPAIR</h1>
+        <p>
+          CAREPAIR är en ledande aktör inom bilreparationstjänster, grundat med
+          en passion för att erbjuda våra kunder högkvalitativa, pålitliga och
+          innovativa lösningar. Med vår djupa förståelse för bilindustrin och en
+          stark känsla för kundservice är vårt mål att säkerställa att varje
+          fordon lämnar våra verkstäder i perfekt skick.
+        </p>
+      </section>
+      <section class="team">
+        <h2>Vår Personal</h2>
+        <div class="team-members">
+          <article class="team-member">
+            <img src="../src/images/employees/man.jpg" alt="Noah Cramel" />
+            <h3>Noah Cramel</h3>
+            <p>VD och grundare</p>
+            <p>
+              Noah grundade CAREPAIR med visionen att revolutionera
+              bilreparationsbranschen genom att kombinera toppmodern teknik med
+              enastående kundservice. Hans långa erfarenhet inom
+              fordonsindustrin och engagemang för innovation har gjort företaget
+              till en ledare på marknaden.
+            </p>
+          </article>
+          <article class="team-member">
+            <img src="../src/images/employees/woman.jpg" alt="Yasmine Moon" />
+            <h3>Yasmine Moon</h3>
+            <p>Marknadschef</p>
+            <p>
+              Yasmine är företagets marknadsföringsgeni. Hon ansvarar för att
+              kommunicera CAREPAIRs vision och värderingar till våra kunder. Med
+              sin kreativa strategi och djupa branschkunskap hjälper hon till
+              att stärka vårt varumärke och bygga långsiktiga kundrelationer.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section>
+      <h1>Kontakta Oss</h1>
+      <form action="#" method="post">
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Meddelande:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Skicka</button>
+      </form>
+    </section>
+
+    <footer class="main_footer">
+      <p>&copy; 2024 CAREPAIR. Alla rättigheter förbehållna.</p>
+    </footer>
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>
