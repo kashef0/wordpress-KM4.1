@@ -1,0 +1,225 @@
+/* Base Styles */
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+} */
+
+#header {
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    position: sticky;
+}
+
+#main_nav {
+    backdrop-filter: blur(30px) brightness(.5);
+    box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+#main_nav.small {
+    padding: 10px 30px;
+    background-color: #222;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
+}
+.logo img:hover {
+    transform: scale(1);
+}
+
+
+#main_nav.small .logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    padding: 10px 0; /* To give space for the lines */
+    transition: color 0.3s ease;
+}
+
+/* Hover Effekter */
+.nav-links li a::before, .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    transition: all 0.3s ease;
+}
+
+/* Under linje - börjar från vänster till höger */
+.nav-links li a::before {
+    bottom: 0;
+    left: 0;
+}
+
+/* Över linje - börjar från höger till vänster */
+.nav-links li a::after {
+    /* top: 0; */
+    right: 0;
+}
+
+/* När man hovrar, visa linjerna */
+.nav-links li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+/* När man hovrar på en länk, ändra färg */
+.nav-links li a:hover {
+    color: #f4a261;
+}
+
+
+/* Aktiv länk-stil */
+.nav-links li a.active {
+    color: #f4a261; /* Gör länken gul för att visa att den är aktiv */
+    font-weight: bold; /* Fetstil för att ge extra vikt */
+}
+
+.nav-links li a.active::before {
+    width: 100%;
+    background-color: brown; /* Matcha linjen med textfärgen */
+}
+
+.nav-links li a.active::after {
+    width: 100%;
+    background-color: brown;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.menu-toggle span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-toggle span:nth-child(3) {
+    top: 20px;
+}
+
+/* Close Icon Transform */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #header {
+        width: 100%;
+    }
+    .menu-toggle {
+        display: block;
+        z-index: 100;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0; 
+        opacity: 0;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        opacity: 1;
+    }
+    
+    .nav-links li {
+        display: inline;
+    }
+    
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #main_nav {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main_nav {
+        padding: 10px 15px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+}
